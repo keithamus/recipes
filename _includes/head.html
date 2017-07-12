@@ -1,0 +1,4 @@
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+{% capture styles %}{% include critical.scss %}{% endcapture %}<style>{{ styles | scssify }}</style>
+<meta name="theme-color" content="#C2185B">

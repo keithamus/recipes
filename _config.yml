@@ -1,0 +1,59 @@
+title: Keith's Recipes
+description: |
+  A recipe site
+baseurl: ""
+
+safe: true
+markdown: kramdown
+kramdown:
+  input: GFM
+
+compress_html:
+  clippings: all
+  comments:  all
+  startings:  all
+  endings:   all
+
+exclude:
+  - node_modules
+  - package.json
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - README.md
+
+googleanalytics: "UA-15784258-3"
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: recipe
+  - scope:
+      path: ""
+      type: ingredients
+    values:
+      layout: ingredient
+  - scope:
+      path: ""
+      type: equipment
+    values:
+      layout: equipment
+
+collections:
+  recipes:
+      output: true
+      permalink: /recipe/:path/
+  ingredients:
+      output: true
+      permalink: /ingredient/:path/
+  equipment:
+      output: true
+      permalink: /equipment/:path/

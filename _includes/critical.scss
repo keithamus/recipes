@@ -1,0 +1,148 @@
+html {
+  font-size: 16px;
+  line-height: 1.2rem;
+  height: 100%;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+}
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+*[hidden] {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+picture {
+  width: 100%;
+  display: block;
+  line-height: 0;
+  font-size: 0;
+}
+
+picture img {
+  width: inherit;
+  height: inherit;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  position: relative;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  height: 48px;
+  font-size: 12px;
+  color: rgba(0,0,0,.54);
+  padding-bottom: 8px;
+
+  tbody tr > & {
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+}
+
+tr {
+  position: relative;
+  height: 48px;
+  transition-duration: .28s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-property: background-color;
+  border-top: 1px solid rgba(0,0,0,.12);
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  
+  &:hover {
+    background-color: #eee;
+  }
+
+  &:first-child {
+    border-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+}
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  position: relative;
+  height: 48px;
+  padding: 12px 18px;
+  box-sizing: border-box;
+}
+
+.cell--numeric {
+  text-align: right;
+}
+
+.cell--indent {
+  text-indent: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+
+  & span, & svg, & a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.54);
+    display: block;
+    margin: 1rem 0.15rem;
+  }
+
+  & svg {
+    width: 1rem;
+    fill: #F5BED8;
+  }
+}
+
+@import '_button.scss';
+@import '_header.scss';
+@import '_grid-debug.scss';

@@ -1,0 +1,34 @@
+.instructions {
+}
+
+.instruction {
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 1rem;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__action {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__ingredients, &__equipment {
+    font-size: 0.9rem;
+    display: block;
+    margin: 0 0 0 1.5rem;
+    color: rgba(0,0,0,.54);
+  }
+
+  &__equipment {
+    margin-bottom: 0.5rem;
+  }
+
+}

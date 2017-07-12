@@ -1,0 +1,17 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="{{page.bodyClass}}">
+    {% include header.html %}
+    <main class="page-content">
+        {{ content }}
+    </main>
+    {% include footer.html %}
+    <script>window.location.search.match(/showgrid/) && document.body.classList.add('showgrid')</script>
+  </body>
+</html>

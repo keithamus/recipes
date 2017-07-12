@@ -1,0 +1,173 @@
+---
+layout: default
+headerStyle: solid
+headerTitle: Create Recipe
+path: /create-recipe/
+---
+{% capture styles %}{% include recipe-form.scss %}{% endcapture %}<style>{{ styles | scssify }}</style>
+<form>
+
+  <section class="main-info card">
+    <h4 class="card__title">Main Info</h4>
+
+    <label class="field--text"> <span class="label">Title</span>
+      <input type="text" name="title" value="Old Fashioned" placeholder=" "/>
+    </label>
+
+    <label class="field--text">
+      <span class="label">Category</span>
+      <select name="category"/>
+        <option>Alcohol Drinks</option>
+        <option>Lunches</option>
+        <option>Dinners</option>
+        <option>Bases</option>
+        <option>Garnishes</option>
+      </select>
+    </label>
+
+    <h3>Tags</h3>
+    <div class="menubar__subtitle">
+      In
+      <input >
+      {% for tag in page.tags %}
+      <a href="/tag/{{ tag | slugfiy }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </div>
+
+  </section>
+
+  <section class="equipment card">
+    <h4 class="card__title">Equipment Needed</h4>
+    <ul class="card__checklist">
+      <li class="card__checklist-item">
+        <label class="field--text">
+          <span class="label">Item</span>
+          <input name="equipment[]" type="text" placeholder=" ">
+        </label>
+      </li>
+    </ul>
+    <div class="card__actions">
+      <a class="card__action">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V9z"/>
+        </svg>
+        Add
+      </a>
+    </div>
+  </section>
+
+  <section class="ingredients card">
+    <h4 class="card__title">Ingredients Needed</h4>
+    <ul class="card__checklist">
+      {% for ingredient in page.recipeComponent %}
+      <li class="ingredient ingredient--component card__checklist-item">
+        <label class="field--checkbox">
+          <input class="strike-checked" type="checkbox">
+          {% assign component = site.recipes | where: "slug", ingredient.slug | first %}
+          {% if component %}
+          <a href="{{ component.url }}">
+            {{ component.title }}
+          </a>
+          {% else %}
+            {{ ingredient }}
+          {% endif %}
+          {% if ingredient.amount %}
+          <span>: 
+            {% for amount in ingredient.amount %}
+              {% if forloop.index == 2 %}({% endif %}{{ amount }}{% if forloop.last and forloop.index != 1 %}){% endif %}
+            {% endfor %}
+          </span>
+          {% endif %}
+        </label>
+      </li>
+      {% endfor %}
+      {% for ingredient in page.recipeIngredient %}
+      <li class="ingredient card__checklist-item">
+        <label class="field--checkbox">
+          <input class="strike-checked" type="checkbox">
+          {% assign ingredientData = site.ingredients | where: "slug", ingredient.slug | first %}
+          {% if ingredientData %}
+            <a href="{{ ingredientData.url }}">
+              {{ ingredientData.title }}
+            </a>
+          {% else %}
+            {{ ingredient }}
+          {% endif %}
+          {% if ingredient.amount %}
+          <span>: 
+            {% for amount in ingredient.amount %}
+              {% if forloop.index == 2 %}({% endif %}{{ amount }}{% if forloop.last and forloop.index != 1 %}){% endif %}
+            {% endfor %}
+          </span>
+          {% endif %}
+        </label>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="ingredients card">
+    <h4 class="card__title">Instructions</h4>
+    <ul class="card__checklist">
+      {% for instruction in page.recipeInstructions %}
+        <li class="instruction card__checklist-item">
+          <label class="field--checkbox">
+            <input class="strike-checked" type="checkbox">
+            <span>{{ instruction.instruction }}</span>
+          </label>
+          {% if instruction.ingredients %}
+            <small class="instruction__ingredients"><em>Ingredients</em>: 
+              {% for ingredient in instruction.ingredients %}
+                {% assign ingredientData = site.ingredients | where: "slug", ingredient | first %}
+                {% assign recipeData = site.recipes | where: "slug", ingredient | first %}
+                {% if recipeData %}
+                  <a href="{{ recipeData.url }}">{{ recipeData.title }}</a>
+                {% elsif ingredientData %}
+                  <a href="{{ ingredientData.url }}">{{ ingredientData.title }}</a>
+                {% else %}
+                  {{ ingredient }}
+                {% endif %}
+                {% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </small>
+          {% endif %}
+          {% if instruction.equipment %}
+          <small class="instruction__equipment"><em>Equipment</em>: {{ instruction.equipment | join: ', '}}</small>
+          {% endif %}
+          <div class="instruction__actions">
+            {% if instruction.time %}
+              <a class="instruction__action">
+                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V9z"/>
+                </svg>
+                {% include iso-duration-to-friendly.md duration=instruction.time %}
+              </a>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  {% if page.notes %}
+  <section class="notes card">
+    <h4 class="card__title">Notes</h4>
+    <ul>
+      {% for note in page.notes %}
+        <li>{{ note }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <aside class="nutrition card card--table">
+    <h4 class="card__title">Nutrition</h4>
+    {% include nutrition-table.html %}
+  </aside>
+
+  {{ content }}
+
+</article> 
+

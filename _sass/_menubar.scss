@@ -1,0 +1,65 @@
+.menubar {
+  background: #C2185B;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition-duration: .2s;
+  transition-property: max-height,box-shadow;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  width: 100%;
+  padding: 1rem;
+
+  &__title {
+    font-size: 1.8rem;
+    margin: 0.1rem 0 0.7rem;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    margin: 0.2 0 0.8rem;
+    color: #fff;
+  }
+
+  &__subtitle a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 0 -0.5rem;
+  }
+
+  &__info {
+    color: white;
+    fill: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-icon {
+      width: 1.6rem;
+    }
+
+    &-title {
+      opacity: 0.5;
+      font-size: 0.9rem;
+    }
+    
+  }
+
+}

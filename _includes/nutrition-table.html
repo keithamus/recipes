@@ -1,0 +1,83 @@
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Per
+        {% if page.nutrition.servingSize %}
+          {% for amount in page.nutrition.servingSize %}
+            {% if forloop.index == 2 %}({% endif %}{{ amount }}{% if forloop.last and forloop.index != 1 %}){% endif %}
+          {% endfor %}
+        {% else %}
+          100 g
+        {% endif %}
+      </th>
+      <th>% Daily Allowance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      {% capture calories %}{% include calc-nutrient.md recipe=page name='calories' %}{% endcapture %}
+      <th title="The number of calories.">Calories (kcal)</th>
+      <td class="cell--numeric">{{ calories | round: 0 }}</td>
+      <td class="cell--numeric">{{ calories | times: 0.05 | round: 0 | append: '%'}}</td>
+    </tr><tr>
+      {% capture fat %}{% include calc-nutrient.md recipe=page name='fat' %}{% endcapture %}
+      <th title="The number of grams of fat.">Fat Content (g)</th>
+      <td class="cell--numeric">{{ fat }}</td>
+      <td class="cell--numeric">{{ fat | times: 1.428571429 | round: 0 | append: '%' }}</td>
+    </tr><tr>
+      {% capture saturatedFat %}{% include calc-nutrient.md recipe=page name='saturatedFat' %}{% endcapture %}
+      <th class="cell--indent" title="The number of grams of saturated fat.">Saturated Fat (g)</th>
+      <td class="cell--numeric">{{ saturatedFat }}</td>
+      <td class="cell--numeric">{{ saturatedFat | times: 5 | round: 0 | append: '%' }}</td>
+    </tr><tr>
+      {% capture unsaturatedFat %}{% include calc-nutrient.md recipe=page name='unsaturatedFat' %}{% endcapture %}
+      <th class="cell--indent" title="The number of grams of unsaturated fat.">Unsaturated Fat (g)</th>
+      <td class="cell--numeric">{{ unsaturatedFat }}</td>
+      <td class="cell--numeric">{{ unsaturatedFat | times: 5.882352941 | round: 0 | append: '%' }}</td>
+    </tr><tr>
+      {% capture transFat %}{% include calc-nutrient.md recipe=page name='transFat' %}{% endcapture %}
+      <th class="cell--indent" title="The number of grams of trans fat.">Trans Fat Content (g)</th>
+      <td class="cell--numeric">{{ transFat }}</td>
+      <td class="cell--numeric">{{ transFat | round: 0 | append: '%' }}</td>
+    </tr><tr>
+      {% capture cholesterol %}{% include calc-nutrient.md recipe=page name='cholesterol' %}{% endcapture %}
+      <th class="cell--indent" title="The number of milligrams of cholesterol.">Cholesterol (mg)</th>
+      <td class="cell--numeric">{{ cholesterol }}</td>
+      <td class="cell--numeric">{{ cholesterol | times: 0.333333333 | round: 0 | append: '%' }}</td>
+    </tr><tr>
+      {% capture sodium %}{% include calc-nutrient.md recipe=page name='sodium' %}{% endcapture %}
+      <th title="The number of milligrams of sodium.">Sodium (mg)</th>
+      <td class="cell--numeric">{{ sodium }}</td>
+      <td class="cell--numeric">{{ sodium | times: 0.041666667 | round: 0 | append: '%' }}</td>
+    </tr><tr>
+      {% capture carbohydrate %}{% include calc-nutrient.md recipe=page name='carbohydrate' %}{% endcapture %}
+      <th title="The number of grams of carbohydrates.">Carbohydrates (g)</th>
+      <td class="cell--numeric">{{ carbohydrate }}</td>
+      <td class="cell--numeric">{{ carbohydrate | times: 0.384615385 | round: 0 | append: '%' }}</td>
+    </tr><tr>
+      {% capture fiber %}{% include calc-nutrient.md recipe=page name='fiber' %}{% endcapture %}
+      <th class="cell--indent" title="The number of grams of fiber.">Fibre (g)</th>
+      <td class="cell--numeric">{{ fiber }}</td>
+      <td class="cell--numeric">{{ fiber | times: 4.166666667 | round: 0 | append: '%' }}</td>
+    </tr><tr>
+      {% capture sugar %}{% include calc-nutrient.md recipe=page name='sugar' %}{% endcapture %}
+      <th class="cell--indent" title="The number of grams of sugar.">Sugar (g)</th>
+      <td class="cell--numeric">{{ sugar }}</td>
+      <td class="cell--numeric">{{ sugar | times: 1.111111111 | round: 0 | append: '%' }}</td>
+    </tr><tr>
+      {% capture protein %}{% include calc-nutrient.md recipe=page name='protein' %}{% endcapture %}
+      <th title="The number of grams of protein.">Protein (g)</th>
+      <td class="cell--numeric">{{ protein }}</td>
+      <td class="cell--numeric">{{ protein | times: 2.222222222 | round: 0 | append: '%' }}</td>
+    </tr>
+    {% capture alcohol %}{% include calc-nutrient.md recipe=page name='alcohol' %}{% endcapture %}
+    {% assign alcohol = alcohol | round: 0 %} 
+    {% if alcohol > 0 %}
+      <tr>
+        <th title="The number of grams of alcohol.">Alcohol (g)</th>
+        <td class="cell--numeric">{{ alcohol }}</td>
+        <td class="cell--numeric">{{ alcohol | times: 6.25 | round: 0 | append: '%' }}</td>
+      </tr>
+    {% endif %}
+</table>

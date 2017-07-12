@@ -1,0 +1,33 @@
+---
+bodyClass: index
+headerTitle: Keith's Recipes
+headerStyle: solid
+---
+{% assign groups = site.recipes | group_by: "category" | sort: "name" %}
+{% capture styles %}{% include index.scss %}{% endcapture %}<style type="text/css">{{ styles | scssify }}</style>
+
+  {% for group in groups %}
+    <h2 class="grid__subheading">{{ group.items[0].category }}</h2>
+    <div class="category grid grid--homogenous">
+
+      {% for recipe in group.items %}
+        <div class="card card--homogenous">
+          <div class="card__heading">
+            <h4 class="card__title">
+              <a href="{{ recipe.url }}">{{ recipe.title }}</a>
+            </h4>
+          </div>
+
+          <a class="card__image" href="{{ recipe.url }}">
+            <picture alt="" role="presentation">
+              <source srcset="{{ site.github.url }}/images{{ recipe.id }}-400.jpg 400w"/>
+              <source srcset="{{ site.github.url }}/images{{ recipe.id }}-400.webp 400w" type="image/webp"/>
+              <img src="{{ site.github.url }}/images{{ recipe.id }}-400.jpg"/>
+            </picture>
+          </a>
+
+        </div>
+      {% endfor %}
+
+    </div>
+  {% endfor %}

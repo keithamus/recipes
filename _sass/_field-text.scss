@@ -1,0 +1,43 @@
+.field--text {
+  display: block;
+  position: relative;
+  padding-top: 1rem;
+  margin: 1rem 0;
+
+  input[type="text"] {
+    border: none;
+    display: block;
+    font-size: 1rem;
+    margin: 0;
+    padding: 4px 0;
+    width: 100%;
+    background: none;
+    text-align: left;
+    color: inherit;
+
+    &:focus {
+      outline: none;
+
+      &::after {
+        border-bottom: 1px solid #3f51b5;
+      }
+    }
+
+    &:placeholder-shown:not(:focus) ~ .label {
+      font-size: 2rem;
+    }
+  }
+
+  .label {
+    position: absolute;
+    font-size: 1rem;
+    margin-top: -1rem;
+
+    &::after {
+      content: '';
+      display: block;
+      border-bottom: 1px solid rgba(0, 0, 0, .12);
+    }
+  }
+
+}
