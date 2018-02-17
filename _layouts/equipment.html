@@ -10,7 +10,7 @@ layout: default
     <source srcset="{{ site.github.url }}/images{{ page.id }}-1441-810.jpg 1440w" media="(max-width: 900px)"/>
     <source srcset="{{ site.github.url }}/images{{ page.id }}-2880-560.jpg 2880w"/>
     <source srcset="{{ site.github.url }}/images{{ page.id }}-1441-280.jpg 1440w"/>
-    <img src="{{ site.github.url }}/images{{ recipe.id }}-2880-560.jpg"/>
+    <img src="{{ site.github.url }}/images{{ recipe.id }}-2880-560.jpg" onerror="this.style.display='none'"/>
   </picture>
 
   <div class="menubar">
@@ -72,7 +72,7 @@ layout: default
           <picture alt="" role="presentation">
             <source srcset="{{ site.github.url }}/images{{ recipe.id }}-400.jpg 400w"/>
             <source srcset="{{ site.github.url }}/images{{ recipe.id }}-400.webp 400w" type="image/webp"/>
-            <img src="{{ site.github.url }}/images{{ recipe.id }}-400.jpg"/>
+            <img src="{{ site.github.url }}/images{{ recipe.id }}-400.jpg" onerror="this.style.display='none'"/>
           </picture>
         </a>
 
