@@ -119,9 +119,16 @@ td {
   text-indent: 2rem;
 }
 
+.index {
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   display: flex;
   flex-direction: column;
+
+  flex: 1;
 }
 
 footer {
@@ -141,6 +148,11 @@ footer {
     width: 1rem;
     fill: #F5BED8;
   }
+}
+
+.not-found--title {
+  font-size: 1.8em;
+  margin-top: 1em;
 }
 
 @import '_button.scss';
