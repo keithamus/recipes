@@ -22,7 +22,7 @@ headerStyle: solid
             <picture alt="" role="presentation">
               <source srcset="{{ site.github.url }}/images{{ recipe.id }}-400.jpg 400w"/>
               <source srcset="{{ site.github.url }}/images{{ recipe.id }}-400.webp 400w" type="image/webp"/>
-              <img src="{{ site.github.url }}/images{{ recipe.id }}-400.jpg"/>
+              <img src="{{ site.github.url }}/images{{ recipe.id }}-400.jpg" onerror="this.style.display='none'"/>
             </picture>
           </a>
 
