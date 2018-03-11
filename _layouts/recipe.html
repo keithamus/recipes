@@ -147,7 +147,7 @@ layout: default
           {% assign component = site.recipes | where: "slug", ingredient.slug | first %}
           {% if component %}
           <a href="{{ component.url }}">
-            {{ component.title }}
+            {% if ingredient.name %}{{ ingredient.name }}{% else %}{{ component.title }}{% endif %}
           </a>
           {% else %}
             {{ ingredient }}
@@ -169,7 +169,7 @@ layout: default
           {% assign ingredientData = site.ingredients | where: "slug", ingredient.slug | first %}
           {% if ingredientData %}
             <a href="{{ ingredientData.url }}">
-              {{ ingredientData.title }}
+              {% if ingredient.name %}{{ ingredient.name }}{% else %}{{ ingredientData.title }}{% endif %}
             </a>
           {% else %}
             {{ ingredient }}
@@ -213,7 +213,17 @@ layout: default
             </small>
           {% endif %}
           {% if instruction.equipment %}
-          <small class="instruction__equipment"><em>Equipment</em>: {{ instruction.equipment | join: ', '}}</small>
+            <small class="instruction__equipment"><em>Equipment</em>: 
+              {% for equipment in instruction.equipment %}
+                {% assign equipmentData = site.equipment | where: "slug", equipment | first %}
+                {% if equipmentData %}
+                  <a href="{{ equipmentData.url }}">{{ equipmentData.title }}</a>
+                {% else %}
+                  {{ equipment }}
+                {% endif %}
+                {% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </small>
           {% endif %}
           <div class="instruction__actions">
             {% if instruction.time %}

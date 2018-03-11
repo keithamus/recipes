@@ -92,7 +92,7 @@ recipeInstructions:
     equipment: rocks-glass
     scope: prep
 notes:
-  - Bulleit, or Woodford Reserve are great whiskey choices
+  - Woodford Reserve is a great whiskey choice
 ---
 
 Ah the Old Fashioned. My all time favourite drink. If my liver would handle it, I'd happily drink Old Fashioneds all day every day. To me, the Old Fashioned captures the essence of a cocktail - everything added to it is there to lift the base spirit to a new dimension, and taking away any one ingredient and it feels like half a drink. 

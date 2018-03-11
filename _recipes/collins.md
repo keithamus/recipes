@@ -32,7 +32,8 @@ recipeIngredient:
     amount:
       - 60 ml
       - 4 parts
-  - slug: lemon-slice
+  - name: Lemon Slice
+    slug: lemon
     amount:
       - 5g
       - 1 slice
@@ -78,6 +79,8 @@ While it is not _the_ oldest cocktail (an award which, with much contention, lik
 
 A collins is best served in its namesake glass - a collins glass, part of the joy of the collins is watching the bubbles dance up the side of the glass, telling your tongue to prepare itself for the citrus, the fizz and that unique gin flavour. A slice of lemon sitting on the edge, reminding you of the sun sitting on the horizon gives you all of the timeless visual appeal that a cocktail needs.
 
-Practice making a perfect collins and you'll have a good basis for a slew of it's cousin cocktails - what I like to call the ["syrup, citrus & spirit"](/tags/syrup-citrus-spirit) group of cocktails. Perhaps closest is a "Gin Fizz" which is shaken not stirred, into an empty rocks glass, not a collins filled with ice. Arguably the most famous relative is the [Mojito](/recipes/mojito) which could be described as a "Ron Collins with Mint". On the short side, the [Gimlet](/recipes/gimlet) is pretty much a Collins without the soda in a martini glass, that [Gimlet](/recipes/gimlet) and add some mint and you've got a [Southside](/recipes/southside). Still leaving the soda out, switch up the Gin for some Rum and you have a basic [Daiquiri](/recipes/daiquiri), while a [Lemon Drop](/recipes/lemon-drop) switches the Gin for Vodka. More further afield, take away the soda, and add some bitters, shake, and you have yourself a [Fitzgerald](/recipes/fitzgerald) or go a bit further and remove the soda and add some egg whites, shake, and you've just made a [sour cocktail](/recipes/sour-cocktail.md).
+This recipe just shoots for the most classic Collins. The recipe isn't pulling anything interesting - it's just a solid basis for the Collins - where it gets fun is what you do with it after that.
 
-Of course, like any cocktail, feel free to experiment - try using lime juice instead of lemon, add some egg whites, angostura, maybe slide in an extra couple of maraschino cherries - or use maraschino cherry syrup in place of the simple syrup. A mint leaf adds a great bit of aroma and zest, or some cucumber slices for some extra smoothness. Try some different gins, find your favourite, I'm partial to Hendricks, or London Dry Gin.
+Practice making a perfect collins and you'll have a good basis for a slew of it's cousin cocktails - what I like to call the ["syrup, citrus & spirit"](/tags/syrup-citrus-spirit) group of cocktails. Perhaps closest is a "Gin Fizz" which is shaken not stirred, into an empty rocks glass, not a collins filled with ice. Arguably the most famous relative is the [Mojito](/recipes/mojito) which could be described as a "Ron Collins with Mint". On the short side, the [Gimlet](/recipes/gimlet) is pretty much a Collins without the soda in a martini glass, take that [Gimlet](/recipes/gimlet) and add some mint and you've got a [Southside](/recipes/southside).
+
+Of course, like any cocktail, feel free to experiment with adding some extras to this one. Try using lime juice instead of lemon, add some egg whites, angostura, maybe slide in an extra couple of maraschino cherries - or use maraschino cherry syrup in place of the simple syrup. A mint leaf adds a great bit of aroma and zest, or some cucumber slices for some extra smoothness. Try some different gins, find your favourite, I'm partial to Hendricks, or London Dry Gin.

@@ -25,7 +25,12 @@ recipeIngredient:
     amount:
       - 30 ml
       - 2 parts
-  - slug: lemon-slice
+  - slug: egg-whites
+    amount:
+      - 15g
+      - 1 part
+  - title: Lemon Slice
+    slug: lemon
     amount:
       - 5g
       - 1 slice
