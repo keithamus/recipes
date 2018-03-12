@@ -21,6 +21,7 @@ exclude:
   - Gemfile.lock
   - Makefile
   - README.md
+  - vendor
 
 googleanalytics: "UA-15784258-3"
 sass:
