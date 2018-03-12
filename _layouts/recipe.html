@@ -21,7 +21,7 @@ layout: default
       <div class="menubar__info">
         {% include recipe-icon.html %}
         <small class="menubar__info-title">
-          {% if ['Dinners', 'Lunches', 'Breakfasts', 'Sides'] contains page.category %}
+          {% if site.recipe_config.meal_types contains page.category %}
             Serves
           {% else %}
             Makes

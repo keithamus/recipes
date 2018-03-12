@@ -14,6 +14,9 @@ compress_html:
   startings:  all
   endings:   all
 
+recipe_config:
+  meal_types: ['Dinners', 'Lunches', 'Breakfasts', 'Sides']
+
 exclude:
   - node_modules
   - package.json
