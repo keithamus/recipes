@@ -33,19 +33,19 @@ recipeIngredient:
     amount:
       - 400ml
       - 1 can
-  - slug: Onion
+  - slug: onion
     amount:
       - 340g
       - 1 large onion
       - 3 small onions
-  - slug: Garlic
+  - slug: garlic
     amount:
       - 5g
       - 1 medium clove
-  - slug: Green Beans
+  - slug: green-beans
     amount:
       - 100 g
-  - slug: Galangal
+  - slug: galangal
     amount:
       - 50g
       - 1 knob
@@ -60,15 +60,32 @@ recipeEquipment:
   - slug: sieve
 recipeInstructions:
   - instruction: Slice ginger into matchsticks
+    action: chop
   - instruction: Finely dice onion
+    action: chop
   - instruction: Finely chop garlic, generously salt, mince with back of knife
+    action: chop
   - instruction: Trim green beans
-  - instruction: Add onions, simmer til translucent, about 5 minutes
+    action: chop
+  - instruction: Add onions, simmer til translucent
+    time: PT5M
+    action: fry
   - instruction: Add garlic, thai curry paste, frying off for 1 minute until aromatic
+    time: PT1M
+    action: fry
   - instruction: Add coconut milk, stir until consistent
+    action: simmer
   - instruction: Add ginger matchsticks, green beans
-  - instruction: Add chicken, simmer for 30 minutes until tender
+    action: simmer
+  - instruction: Add chicken, simmer until tender
+    time: PT30M
+    action: simmer
   - instruction: Meanwhile, bring pot of water to boil
-  - instruction: Add rice and reduce to simmer, add jasmine, put lid on, simmer for 8mins
+    time: PT10M
+    action: boil
+  - instruction: Add rice and reduce to simmer, add jasmine, put lid on, simmer until cooked
+    time: PT8M
+    action: simmer
   - instruction: Strain rice
+    action: strain
 ---

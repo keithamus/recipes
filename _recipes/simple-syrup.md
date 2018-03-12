@@ -5,9 +5,8 @@ tags:
   - cocktails
   - base
   - syrup
-prepTime: PT30S
 cookingTime: PT10M
-totalTime: PT10M30S
+totalTime: PT10M
 cookingMethod:
   - Boiling
 recipeYield: 200 ml
@@ -19,15 +18,16 @@ recipeIngredient:
   - slug: water
     amount: 200 ml
 recipeEquipment:
-  - sug: medium-sauce-pan
+  - slug: medium-sauce-pan
 recipeInstructions:
   - instruction: Add water, sugar to pan
-    equipment: Medium Sauce Pan
-    ingredients: water, sugar
+    equipment: medium-sauce-pan
+    ingredients: [ water, sugar ]
     action: add
   - instruction: Heat under medium heat, until sugar is dissolved and syrup begins to simmer
-    equipment: Medium Sauce Pan
-    ingredients: water, sugar
+    time: PT10M
+    equipment: medium-sauce-pan
+    ingredients: [ water, sugar ]
     action: boil
 notes:
   - For more flavour, try muscovado, turbinado, demerara, cane sugar or a mixture
