@@ -15,70 +15,22 @@ layout: default
 
   <div class="menubar">
     <h1 class="menubar__title" itemprop="title">{{ page.title }}</h1>
-    <div class="menubar__subtitle" itemprop="keywords">
-      In <a href="/category/{{ page.category | slugfiy }}">{{ page.category }}</a>, 
-      {% for tag in page.tags %}
-      <a href="/tag/{{ tag | slugfiy }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
-      {% endfor %}
-    </div>
+
+    {% include category-and-tags.html %}
+
     <aside class="menubar__navigation">
-      <div class="menubar__info">
-        <svg class="menubar__info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path d="M359 233.6l-.5-.6-79-79c-5.8-6-14.2-10.2-23.5-10.2-11.8 0-22.2 6.2-27.7 16.2 0 0-7 11.4-18.3 29.2l32.6 40c3 3.7 3.3 7.8 1.4 9.7-2.4 2-6 1-10-2l-36-29c-23.5 37.7-56.7 91-83.5 133.6l19 23.4c3 4 3.4 8 1.5 10-2.4 2.8-6 2-10-1l-20-17-36 57.5c-3 5-5 11.2-5 17.7 0 17.8 14.2 32 32 32 7.8 0 14.3-3.3 20.5-7.4l115-84.2-29-35.4c-3-4-3.4-8-1.5-10 2.4-2.6 6-1.8 10 1l38 31.3L355 282c8-6 13-15.3 13-26 0-8.6-3-16.6-9-22.4zm89-94.8L431.5 111l-66.2 38.3L414.5 64 387 48l-70 121 28.5 28.7"/>
-        </svg>
-        <small class="menubar__info-title">Type</small>
-        <p class="menubar__info-value">{{ page.category }}</p>
-      </div>
-      <div class="menubar__info">
-        <svg class="menubar__info-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-          <path d="M223.899,32c25.691,145-96.732,142-95.895,288c0.686,119.51,104.975,160,128.143,160c23.166,0,113.88-26,126.931-160 C393.711,210.816,310.572,96,223.899,32z M256.147,472c0,0-40.701-35.816-40.701-80c0-44.183,40.555-80,40.555-80 s40.332,35.817,40.332,80C296.332,436.184,256.147,472,256.147,472z"/>
-        </svg>
-        <small class="menubar__info-title">Calories</small>
-        <p class="menubar__info-value">{{ calories | round }}</p>
-      </div>
+
+      {% include menubar-type.html %}
+
     </aside>
   </div>
 
-  {% if page.notes %}
-  <section class="notes card">
-    <h4 class="card__title">Notes</h4>
-    <ul>
-      {% for note in page.notes %}
-        <li>{{ note }}</li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
+  {% include notes.html %}
 
+  {% include prose.html %}
 
-  <article class="prose">
-  {{ content }}
-  </article>
-
-  <h2 class="grid__subheading">Recipes that require a {{ page.title }}</h2>
-  <div class="category grid grid--homogenous">
-
-    {% for recipe in site.recipes %}
-      {% assign hasEquipment = recipe.recipeEquipment | where: "slug", page.slug | first %}
-      {% unless hasEquipment %}{% continue %}{% endunless %}
-      <div class="card card--homogenous">
-        <div class="card__heading">
-          <h4 class="card__title">
-            <a href="{{ recipe.url }}">{{ recipe.title }}</a>
-          </h4>
-        </div>
-
-        <a class="card__image" href="{{ recipe.url }}">
-          <picture alt="" role="presentation">
-            <source srcset="{{ site.github.url }}/images{{ recipe.id }}-400.jpg 400w"/>
-            <source srcset="{{ site.github.url }}/images{{ recipe.id }}-400.webp 400w" type="image/webp"/>
-            <img src="{{ site.github.url }}/images{{ recipe.id }}-400.jpg" onerror="this.style.display='none'"/>
-          </picture>
-        </a>
-
-      </div>
-    {% endfor %}
-
-  </div>
+  {% assign linkedRecipesHeading = 'Recipes that require a' %}
+  {% assign linkedRecipesKey = 'recipeEquipment' %}
+  {% include linked-recipes.html %}
 
 </article> 

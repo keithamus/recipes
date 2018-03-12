@@ -1,0 +1,10 @@
+  {% if page.notes %}
+  <section class="notes card">
+    <h4 class="card__title">Notes</h4>
+    <ul>
+      {% for note in page.notes %}
+        <li>{{ note | markdownify }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
