@@ -1,7 +1,5 @@
 cache:
   - bundler
-  - directories:
-    - .jekyll-metadata
 sudo: false
 notifications:
   email: false
@@ -10,4 +8,4 @@ rvm:
   - 2.4.0
 
 before_install: gem install bundler
-script: bundle exec jekyll build --incremental && bundle exec htmlproofer _site
+script: bundle exec jekyll build && bundle exec htmlproofer _site
