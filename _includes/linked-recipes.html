@@ -2,7 +2,7 @@
 <div class="category grid grid--homogenous">
 
   {% for recipe in site.recipes %}
-    {% assign hasRecipe = recipe[linkedRecipesKeyj | where: "slug", page.slug | first %}
+    {% assign hasRecipe = recipe[linkedRecipesKey] | where: "slug", page.slug | first %}
     {% unless hasRecipe %}{% continue %}{% endunless %}
     <div class="card card--homogenous">
       <div class="card__heading">
