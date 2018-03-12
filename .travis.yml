@@ -7,4 +7,4 @@ rvm:
   - 2.4.0
 
 before_install: gem install bundler
-script: jekyll build && htmlproofer _site
+script: bundle exec jekyll build && bundle exec htmlproofer _site
