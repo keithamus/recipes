@@ -20,9 +20,9 @@ headerStyle: solid
 
           <a class="card__image" href="{{ recipe.url }}">
             <picture alt="" role="presentation">
-              <source srcset="{{ site.github.url }}/images{{ recipe.id }}-400.jpg 400w"/>
-              <source srcset="{{ site.github.url }}/images{{ recipe.id }}-400.webp 400w" type="image/webp"/>
-              <img src="{{ site.github.url }}/images{{ recipe.id }}-400.jpg" onerror="this.style.display='none'"/>
+              <source srcset="{{ site.url }}/images{{ recipe.id }}-400.jpg 400w"/>
+              <source srcset="{{ site.url }}/images{{ recipe.id }}-400.webp 400w" type="image/webp"/>
+              <img src="{{ site.url }}/images{{ recipe.id }}-400.jpg" onerror="this.style.display='none'"/>
             </picture>
           </a>
 
