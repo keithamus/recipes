@@ -14,11 +14,14 @@ recipeCuisine: Italian
 recipeIngredient:
   - slug: olive-oil
     amount:
+      - 14 g
       - 1 tbs
   - slug: garlic
     amount: 6 cloves
   - slug: kale
-    amount: 1 bunch
+    amount:
+      - 342 g
+      - 6 leaves
   - slug: cashews
     amount:
       - 75 g
@@ -32,7 +35,8 @@ recipeIngredient:
       - 500 g
   - slug: salt
     amount:
-      - 1/4 tps
+      - 4 g
+      - 1/4 tsp
   - slug: freshly-ground-pepper
     amount: to taste
   - slug: chili-flakes
