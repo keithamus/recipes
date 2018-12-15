@@ -38,9 +38,9 @@ recipeIngredient:
       - 4 g
       - 1/4 tsp
   - slug: freshly-ground-pepper
-    amount: to taste
+    amount: 4g
   - slug: chili-flakes
-    amount: to taste
+    amount: 4g
     optional: true
 recipeEquipment:
   - slug: small-sauce-pan
