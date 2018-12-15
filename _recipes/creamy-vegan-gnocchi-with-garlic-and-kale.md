@@ -12,7 +12,7 @@ cookTime:
 recipeYield: 3 meals
 recipeCuisine: Italian
 recipeIngredient:
-  - slug: olive oil
+  - slug: olive-oil
     amount:
       - 1 tbs
   - slug: garlic
@@ -33,9 +33,9 @@ recipeIngredient:
   - slug: salt
     amount:
       - 1/4 tps
-  - slug: freshly ground pepper
+  - slug: freshly-ground-pepper
     amount: to taste
-  - slug: chili flakes
+  - slug: chili-flakes
     amount: to taste
     optional: true
 recipeEquipment:
