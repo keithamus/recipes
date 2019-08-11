@@ -1,6 +1,7 @@
 ---
 title: Sugar
 pluralTitle: Sugar
+category: misc
 nutrition:
   servingSize: 100 g
   calories: 387 calories

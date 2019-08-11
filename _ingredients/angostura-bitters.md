@@ -1,7 +1,7 @@
 ---
 title: Angostura Bitters
 pluralTitle: Angostura Bitters
-category: Bitters
+category: bitters
 nutrition:
   servingSize: 28 g
   calories: 135 calories

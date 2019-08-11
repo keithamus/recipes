@@ -1,7 +1,7 @@
 ---
 title: Salt
 pluralTitle: Salt
-category: Seasonings
+category: seasonings
 nutrition:
   servingSize: 100 g
   calories: 0 calories

@@ -1,7 +1,7 @@
 ---
 title: Orange
 pluralTitle: Oranges
-category: Fruit
+category: fruit
 nutrition:
   servingSize: 
     - 100 g

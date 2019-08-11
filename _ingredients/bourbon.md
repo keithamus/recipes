@@ -1,7 +1,7 @@
 ---
 title: Bourbon 
 pluralTitle: Bourbon 
-category: Spirit
+category: alcohol
 nutrition:
   servingSize: 25 ml
   calories: 69 calories

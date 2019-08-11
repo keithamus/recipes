@@ -1,7 +1,7 @@
 ---
 title: Garlic
 pluralTitle: Garlic
-category: Seasonings
+category: seasonings
 nutrition:
   servingSize: 100 g
   calories: 149 calories

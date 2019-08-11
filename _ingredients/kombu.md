@@ -1,7 +1,7 @@
 ---
 title: Kombu
 pluralTitle: Kombu
-category: Seasonings
+category: seasonings
 nutrition:
   servingSize: 100 g
   calories: 167 calories

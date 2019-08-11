@@ -1,6 +1,7 @@
 ---
 title: Lime Juice
 pluralTitle: Lime Juice
+category: fruit
 nutrition:
   servingSize: 100 g
   calories: 29 calories

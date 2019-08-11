@@ -1,7 +1,7 @@
 ---
 title: Egg Whites
 pluralTitle: Egg Whites
-category: Dairy
+category: dairy
 nutrition:
   servingSize: 100 g
   calories: 52 calories

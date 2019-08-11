@@ -1,7 +1,7 @@
 ---
 title: Mushroom Powder
 pluralTitle: Mushroom Powder
-category: Seasonings
+category: seasonings
 nutrition:
   servingSize: 100 g
   calories: 33 calories

@@ -1,7 +1,7 @@
 ---
 title: Soy Sauce
 pluralTitle: Soy Sauce
-category: Condiments
+category: condiments
 nutrition:
   servingSize: 100 g
   calories: 53 calories

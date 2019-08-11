@@ -1,6 +1,7 @@
 ---
 title: Lemon
 pluralTitle: Lemon
+category: fruit
 nutrition:
   servingSize: 100 g
   calories: 29 calories

@@ -1,7 +1,7 @@
 ---
 title: Ice
 pluralTitle: Ice
-category: Misc
+category: misc
 nutrition:
   servingSize: 100 g
   calories: 0 calories

@@ -1,7 +1,7 @@
 ---
 title: Peychuards Bitters
 pluralTitle: Peychuards Bitters
-category: Bitters
+category: bitters
 nutrition:
   servingSize: 28 ml
   calories: 135 calories

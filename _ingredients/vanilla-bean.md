@@ -1,7 +1,7 @@
 ---
 title: Vanilla Bean
 pluralTitle: Vanilla Beans
-category: Fruit
+category: fruit
 nutrition:
   servingSize: 100 g
   calories: 288 calories

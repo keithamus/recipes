@@ -1,7 +1,7 @@
 ---
 title: Cherry
 pluralTitle: Cherries
-category: Fruit
+category: fruit
 nutrition:
   servingSize: 100 g
   calories: 50 calories
