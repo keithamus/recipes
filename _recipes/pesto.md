@@ -5,9 +5,9 @@ tags:
   - pesto
   - fresh
 prepTime:
-  - PT15M
-cookTime:
   - PT10M
+cookTime:
+  - PT5M
 recipeYield: 1 portion
 recipeCuisine: Italian
 recipeIngredient:
@@ -28,7 +28,7 @@ recipeIngredient:
       - vegetable-oil
   - slug: garlic
     amount:
-    - 10g
+    - 8g
     - 2 medium cloves
   - slug: parmesan-cheese
     amount: 50 g
@@ -40,9 +40,11 @@ recipeEquipment:
 recipeInstructions:
   - instruction: In a dry frying pan, slowly toast the nuts
     ingredients: pine-nuts
-    time: PT10M
-  - instruction: Add the oil, basil, garlic (peeled), and toasted nuts to a food processor - blend until smooth
-    ingredients: [ oil, basil, garlic, pine-nuts ]
+    time: PT5M
+  - intruction: Peel the garlic
+    ingredients: garlic
+  - instruction: Add all of the ingredients to the food processor and blend until smooth
+    ingredients: [ oil, basil, garlic, pine-nuts, parmesan-cheese ]
 notes:
   - For a fresh twist on the classic, try parsley instead of basil, and toasted hazelnuts instead of pine nuts!
 ---
