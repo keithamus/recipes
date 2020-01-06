@@ -27,4 +27,4 @@ build:
 test: build
 	@bundle exec htmlproofer --checks_to_ignore=ImageCheck,LinkCheck _site
 
-.PHONY: all install clean serve
+ .PHONY: all install clean serve build test
