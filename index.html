@@ -12,17 +12,16 @@ headerStyle: solid
 
       {% for recipe in group.items %}
         <div class="card card--homogenous">
-          <div class="card__heading">
-            <h4 class="card__title">
-              <a href="{{ recipe.url }}">{{ recipe.title }}</a>
-            </h4>
-          </div>
-
           <a class="card__image" href="{{ recipe.url }}">
-            <picture alt="" role="presentation">
+            <div class="card__heading">
+              <h4 class="card__title">
+                <span>{{ recipe.title }}</span>
+              </h4>
+            </div>
+            <picture role="presentation">
               <source srcset="{{ site.url }}/images{{ recipe.id }}-400.jpg 400w"/>
               <source srcset="{{ site.url }}/images{{ recipe.id }}-400.webp 400w" type="image/webp"/>
-              <img src="{{ site.url }}/images{{ recipe.id }}-400.jpg" onerror="this.style.display='none'"/>
+              <img src="{{ site.url }}/images{{ recipe.id }}-400.jpg" alt="" onerror="this.style.display='none'"/>
             </picture>
           </a>
 
